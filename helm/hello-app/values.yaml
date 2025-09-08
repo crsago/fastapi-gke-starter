@@ -1,0 +1,29 @@
+replicaCount: 2
+
+image:
+  repository: YOUR-REGION-docker.pkg.dev/YOUR-GCP-PROJECT/YOUR-ARTIFACT-REPO/hello-app
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+podAnnotations: {}
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+secretRef: app-secrets
+
+env: []

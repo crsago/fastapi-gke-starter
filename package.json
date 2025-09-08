@@ -1,0 +1,9 @@
+{
+  "name": "hello-app-python-fastapi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hello World FastAPI web app for GKE + Helm",
+  "scripts": {
+    "start": "echo 'Use docker run ...'"
+  }
+}

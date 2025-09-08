@@ -1,0 +1,3 @@
+1) Get service:  kubectl get svc -n {{ .Release.Namespace }} {{ include "hello-app.fullname" . }}
+2) Port-forward: kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "hello-app.fullname" . }} 8080:{{ .Values.service.port }}
+3) Open:         http://127.0.0.1:8080/

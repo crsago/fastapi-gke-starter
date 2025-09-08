@@ -1,0 +1,10 @@
+replicaCount: 2
+image:
+  tag: "staging"
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+env:
+  - name: ENVIRONMENT
+    value: "staging"
